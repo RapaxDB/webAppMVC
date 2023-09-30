@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit user</title>
+</head>
+
+<body>
+
+<h2>Edit user:</h2>
+
+<form th:method="POST" th:action="@{/users/edit}" th:object="${user}">
+
+    <label for="id"></label>
+    <input type="hidden" th:field="*{id}" id="id"/>
+
+    <label for="firstName">Enter firstname</label>
+    <input type="text" th:field="*{firstName}" id="firstName"/>
+
+    <label for="lastName">Enter lastname</label>
+    <input type="text" th:field="*{lastName}" id="lastName"/>
+
+    <label for="email">Enter email</label>
+    <input type="text" th:field="*{email}" id="email"/>
+    <br/>
+    <input type="submit" value="Update!"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USERS LIST</title>
+</head>
+<body>
+
+<h2>Users:</h2>
+<div th:each="user:${list}">
+    <a th:href="@{users/user(id=${user.getId()})}" th:text="${user.getId()}"></a>
+    <a th:href="@{users/user(id=${user.getId()})}" th:text="${user.getFirstName()}"></a>
+    <a th:href="@{users/user(id=${user.getId()})}" th:text="${user.getLastName()}"></a>
+    <a th:href="@{users/user(id=${user.getId()})}" th:text="${user.getEmail()}"></a>
+</div>
+    <a th:href="@{users/new}" th:text="New"></a>
+</body>
+</html>
