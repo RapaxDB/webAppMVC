@@ -49,7 +49,7 @@ public class UserDaoImpl implements UserDao{
     }
 
 
-    void flushAndClear() {
+    private void flushAndClear() {
         entityManager.flush();
         entityManager.clear();
     }
